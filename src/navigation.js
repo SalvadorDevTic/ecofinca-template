@@ -23,44 +23,44 @@ export const headerData = {
     //     },
     //   ],
     // },
-    {
-      text: 'Pages',
-      links: [
-        // {
-        //   text: 'Features (Anchor Link)',
-        //   href: getPermalink('/#features'),
-        // },
-        {
-          text: 'Inicio',
-          href: getPermalink('/'),
-        },
-        {
-          text: 'Laboratorío',
-          href: getPermalink('#'),
-          // href: getPermalink('/pricing'),
-        },
-        {
-          text: 'Sobre Pura Vida',
-          href: getPermalink('#'),
-          // href: getPermalink('/about'),
-        },
-        {
-          text: 'Contact',
-          href: getPermalink('#'),
-          // href: getPermalink('/contact'),
-        },
-        {
-          text: 'Terms',
-          href: getPermalink('#'),
-          // href: getPermalink('/terms'),
-        },
-        {
-          text: 'Privacy policy',
-          href: getPermalink('#'),
-          // href: getPermalink('/privacy'),
-        },
-      ],
-    },
+    // {
+    //   text: 'Pages',
+    //   links: [
+    //     // {
+    //     //   text: 'Features (Anchor Link)',
+    //     //   href: getPermalink('/#features'),
+    //     // },
+    //     {
+    //       text: 'Inicio',
+    //       href: getPermalink('/'),
+    //     },
+    //     {
+    //       text: 'Laboratorío',
+    //       href: getPermalink('#'),
+    //       // href: getPermalink('/pricing'),
+    //     },
+    //     {
+    //       text: 'Sobre Pura Vida',
+    //       href: getPermalink('#'),
+    //       // href: getPermalink('/about'),
+    //     },
+    //     {
+    //       text: 'Contact',
+    //       href: getPermalink('#'),
+    //       // href: getPermalink('/contact'),
+    //     },
+    //     {
+    //       text: 'Terms',
+    //       href: getPermalink('#'),
+    //       // href: getPermalink('/terms'),
+    //     },
+    //     {
+    //       text: 'Privacy policy',
+    //       href: getPermalink('#'),
+    //       // href: getPermalink('/privacy'),
+    //     },
+    //   ],
+    // },
     // {
     //   text: 'Landing',
     //   links: [
@@ -118,6 +118,35 @@ export const headerData = {
     // {
     //   text: 'Widgets',
     //   href: '#',
+    // },
+    {
+      text: 'Inicio',
+      href: getPermalink('/'),
+    },
+    {
+      text: 'Objetivos',
+      href: getPermalink('#'),
+      // href: getPermalink('/pricing'),
+    },
+    {
+      text: 'Nosotros',
+      href: getPermalink('#'),
+      // href: getPermalink('/about'),
+    },
+    {
+      text: 'Contacto',
+      href: getPermalink('#'),
+      // href: getPermalink('/contact'),
+    },
+    // {
+    //   text: 'Terms',
+    //   href: getPermalink('#'),
+    //   // href: getPermalink('/terms'),
+    // },
+    // {
+    //   text: 'Privacy policy',
+    //   href: getPermalink('#'),
+    //   // href: getPermalink('/privacy'),
     // },
   ],
   // actions: [{ text: 'Download', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],
