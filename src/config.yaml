@@ -1,6 +1,6 @@
 site:
-  name: AstroWind
-  site: 'https://astrowind.vercel.app'
+  name: Pura Vida
+  site: 'https://ecofinca-puravida.netlify.app/'
   base: '/'
   trailingSlash: false
 
@@ -9,16 +9,16 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: PuraVida
+    template: '%s — PuraVida'
+  description: "\U0001F680 Una ecofinca al servicio de la humanidad, laboratorios de permacultura y agroecología"
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: PuraVida
     images:
-      - url: '~/assets/images/default.png'
+      - url: '~/assets/images/EFPV-LogoTira.png'
         width: 1200
         height: 628
     type: website
@@ -28,7 +28,7 @@ metadata:
     cardType: summary_large_image
 
 i18n:
-  language: en
+  language: es
   textDirection: ltr
 
 apps:
