@@ -36,23 +36,28 @@ export const headerData = {
         },
         {
           text: 'Laboratorío',
-          href: getPermalink('/pricing'),
+          href: getPermalink('#'),
+          // href: getPermalink('/pricing'),
         },
         {
           text: 'Sobre Pura Vida',
-          href: getPermalink('/about'),
+          href: getPermalink('#'),
+          // href: getPermalink('/about'),
         },
         {
           text: 'Contact',
-          href: getPermalink('/contact'),
+          href: getPermalink('#'),
+          // href: getPermalink('/contact'),
         },
         {
           text: 'Terms',
-          href: getPermalink('/terms'),
+          href: getPermalink('#'),
+          // href: getPermalink('/terms'),
         },
         {
           text: 'Privacy policy',
-          href: getPermalink('/privacy'),
+          href: getPermalink('#'),
+          // href: getPermalink('/privacy'),
         },
       ],
     },
