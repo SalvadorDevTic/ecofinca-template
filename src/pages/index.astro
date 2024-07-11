@@ -7,7 +7,7 @@ import Hero from '~/components/widgets/Hero.astro';
 // import Features from '~/components/widgets/Features.astro';
 // import Features2 from '~/components/widgets/Features2.astro';
 // import Steps from '~/components/widgets/Steps.astro';
-// import Content from '~/components/widgets/Content.astro';
+import Content from '~/components/widgets/Content.astro';
 // import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 // import FAQs from '~/components/widgets/FAQs.astro';
 // import Stats from '~/components/widgets/Stats.astro';
@@ -24,9 +24,10 @@ const metadata = {
 
   <Hero image={{ src: '~/assets/images/undraw_festivities_tvvj.png', alt: 'nature Hero Image' }}>
     <Fragment slot="title">
-      Bienvenidos a <span class="hidden xl:inline">ecofinca</span>
-      <span class="text-accent dark:text-white highlight"> Pura Vida</span>
-      <br />Permacultura + Agroecología
+      "Vive la Vida en Sintonía <br /> con la <span class="text-green-800 dark:text-green-600 highlight"
+        >Naturaleza</span
+      >"
+      <!-- <br />Permacultura + Agroecología -->
     </Fragment>
 
     <Fragment slot="subtitle">
@@ -34,8 +35,12 @@ const metadata = {
         <span class="font-semibold">AstroWind</span> is a free, customizable and production-ready template for Astro 4.0
         + Tailwind CSS.</span
       > -->
-      <span class="block mb-1 sm:hidden font-bold text-emerald-700">Calidad de vida...</span>
-      La única riqueza que necesitamos está en la naturaleza; observamos, aprendemos y creamos a su semejanza.
+      <!-- <span class="block mb-1 sm:hidden font-bold text-emerald-700">Calidad de vida...</span> -->
+      <!-- La sede de AFPA, donde la <span class="font-bold">permacultura</span> y la <span class="font-bold"
+        >agroecología</span
+      > se convierten en realidad. -->
+      ¡Únete a nosotros en este viaje emocionante y descubre por qué nuestra finca es el lugar ideal para conectarse con
+      la naturaleza y construir un mundo mejor!"
     </Fragment>
     <Fragment slot="content">
       <!-- <SocialShare text="Ecofinca Pura Vida" url="https://ecofinca-puravida.netlify.app/" /> -->
@@ -50,7 +55,7 @@ const metadata = {
 
   <!-- <Features
     id="features"
-    tagline="Features"
+    tagline=""
     title="What you get with AstroWind"
     subtitle="One of the most professional and comprehensive templates currently on the market. Most starred & forked Astro theme in 2022."
     items={[
@@ -101,41 +106,41 @@ const metadata = {
 
   <!-- Content Widget **************** -->
 
-  <!-- <Content
+  <Content
     isReversed
-    tagline="Inside template"
-    title="AstroWind's Blueprint: Fun Meets Functionality!"
+    tagline=""
+    title="Comprometidas con la Permacultura y la Agroecología"
     items={[
       {
-        title: 'Built on top of Astro 4.0',
-        description:
-          'Benefiting from the performance and developer-friendly features of this modern static site generator.',
+        title: 'Sostenibilidad en Acción',
+        description: 'Comprometidas con el futuro: Creando un mundo más sostenible para tierra y gente',
       },
       {
-        title: 'Styled using Tailwind CSS',
-        description:
-          'Facilitating rapid design and consistent styling with this highly popular utility-first CSS framework.',
+        title: 'La Cultura del Futuro',
+        description: 'Nuestro compromiso con el medio ambiente y la comunidad: Uniendo personas y naturaleza',
       },
       {
-        title: 'Cross-browser compatibility',
-        description:
-          'Ensure your website looks and functions consistently across various web browsers, delivering a seamless experience to all users.',
+        title: 'Vivir en Armonía',
+        description: 'Donde la vida es una sinfonía: Encontrar la armonía entre personas, tierra y naturaleza',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Colorful Image',
+      src: '~/assets/images/fotoGrupoVoluntarios.JPG',
+      alt: 'Grupo de voluntarios',
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Building on modern foundations</h3>
-      Gain a competitive advantage by incorporating industry leading practices
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        ¿Quieres vivir una experiencia inolvidable, conectada con la naturaleza y apoyando la sostenibilidad?
+      </h3>
+      ¡Entonces Ecofinca Pura Vida es tu destino! Como la sede de AFPA, esta finca es un refugio para aquellos que buscan
+      encontrar el equilibrio entre la vida moderna y la armonía con el medio ambiente.
     </Fragment>
 
     <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+      <div class="absolute inset-0 bg-green-50 dark:bg-transparent"></div>
     </Fragment>
-  </Content> -->
+  </Content>
 
   <!-- Content Widget **************** -->
 
