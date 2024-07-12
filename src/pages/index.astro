@@ -5,10 +5,10 @@ import Hero from '~/components/widgets/Hero.astro';
 // import SocialShare from '~/components/common/SocialShare.astro';
 // import Note from '~/components/widgets/Note.astro';
 // import Features from '~/components/widgets/Features.astro';
-// import Features2 from '~/components/widgets/Features2.astro';
+import Features2 from '~/components/widgets/Features2.astro';
 // import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
-// import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 // import FAQs from '~/components/widgets/FAQs.astro';
 // import Stats from '~/components/widgets/Stats.astro';
 // import CallToAction from '~/components/widgets/CallToAction.astro';
@@ -22,23 +22,14 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
-  <Hero image={{ src: '~/assets/images/undraw_festivities_tvvj.png', alt: 'nature Hero Image' }}>
+  <Hero id="home" image={{ src: '~/assets/images/undraw_festivities_tvvj.png', alt: 'nature Hero Image' }}>
     <Fragment slot="title">
-      "Vive la Vida en Sintonía <br /> con la <span class="text-green-800 dark:text-green-600 highlight"
+      " Vive la Vida en Sintonía <br /> con la <span class="text-green-800 dark:text-green-600 highlight"
         >Naturaleza</span
       >"
-      <!-- <br />Permacultura + Agroecología -->
     </Fragment>
 
     <Fragment slot="subtitle">
-      <!-- <span class="hidden sm:inline">
-        <span class="font-semibold">AstroWind</span> is a free, customizable and production-ready template for Astro 4.0
-        + Tailwind CSS.</span
-      > -->
-      <!-- <span class="block mb-1 sm:hidden font-bold text-emerald-700">Calidad de vida...</span> -->
-      <!-- La sede de AFPA, donde la <span class="font-bold">permacultura</span> y la <span class="font-bold"
-        >agroecología</span
-      > se convierten en realidad. -->
       ¡Únete a nosotros en este viaje emocionante y descubre por qué nuestra finca es el lugar ideal para conectarse con
       la naturaleza y construir un mundo mejor!"
     </Fragment>
@@ -182,7 +173,6 @@ const metadata = {
   <!-- Content Widget **************** -->
 
   <!-- <Content
-    isReversed
     isAfterContent
     items={[
       {
@@ -215,7 +205,7 @@ const metadata = {
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
-  </Content> -->
+  </Content>  -->
 
   <!-- Steps Widget ****************** -->
 
@@ -249,71 +239,74 @@ const metadata = {
       src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
       alt: 'Steps image',
     }}
-  /> -->
+  />
 
   <!-- Features2 Widget ************** -->
 
-  <!-- <Features2
-    title="Most used widgets"
-    subtitle="Provides frequently used components for building websites using Tailwind CSS"
-    tagline="Components"
+  <Features2
+    title="Nuestros objetivos son:"
+    subtitle=""
+    tagline=""
     items={[
       {
-        title: 'Headers',
-        description: "Ever tried driving without GPS? Boom! That's why websites need headers for direction.",
-        icon: 'flat-color-icons:template',
-      },
-      {
-        title: 'Heros',
+        title: 'Fomentar la Permacultura',
         description:
-          "Picture a superhero landing – epic, right? That's the job of a Hero section, making grand entrances!",
-        icon: 'flat-color-icons:gallery',
-      },
-      {
-        title: 'Features',
-        description:
-          'Where websites strut their stuff and show off superpowers. No holding back on the bragging rights here!',
-        icon: 'flat-color-icons:approval',
-      },
-      {
-        title: 'Content',
-        description:
-          "Dive into the meat and potatoes of a site; without it, you'd just be window shopping. Content is king.",
-        icon: 'flat-color-icons:document',
-      },
-      {
-        title: 'Call-to-Action',
-        description:
-          'That enthusiastic friend who\'s always urging, "Do it! Do it!"? Yeah, that\'s this button nudging you towards adventure.',
+          'Comprometidas a fomentar y promover la permacultura y la agroecología en España, involucrando a jóvenes, familias e instituciones en las actividades de recopilación y difusión de información sobre permacultura y agroecología entre personas interesadas, voluntarios, colectivos e instituciones. Esto ayudará a construir una red de relaciones transparentes entre productores y consumidores, lo que a su vez permitirá la creación de mercados, economías y empleos locales más sólidos.',
         icon: 'flat-color-icons:advertising',
       },
       {
-        title: 'Pricing',
-        description: 'Behold the dessert menu of the website world. Tempting choices await, can you resist?',
-        icon: 'flat-color-icons:currency-exchange',
-      },
-      {
-        title: 'Testimonial',
-        description: 'Step into the gossip corner! Here, other visitors spill the beans and share the juicy details.',
-        icon: 'flat-color-icons:voice-presentation',
-      },
-      {
-        title: 'Contact',
+        title: 'Promover la Sostenibilidad',
         description:
-          'Like a digital mailbox, but faster! Drop a line, ask a question, or send a virtual high-five. Ding! Message in.',
-        icon: 'flat-color-icons:business-contact',
+          'Promover la sostenibilidad y el desarrollo sostenible en la agricultura, la ganadería y la sociedad en general, mediante la implementación de prácticas agroecológicas y permaculturas que ayuden a reducir la huella ecológica y aumentar la resiliencia de los sistemas alimentarios. Esto se logrará mediante la promoción de la diversificación de las rentas agrarias, la independencia financiera mayor para los agricultores y ganaderos, y la creación de empleos locales más estables.',
+        icon: 'flat-color-icons:gallery',
       },
       {
-        title: 'Footers',
-        description: "The footer's like the credits of a movie but sprinkled with easter eggs. Time to hunt!",
+        title: 'Apoyar a los Agricultores',
+        description:
+          'Apoyar a los agricultores y ganaderos en la implementación de prácticas sostenibles y agroecológicas, mediante la capacitación y el asesoramiento en técnicas y estrategias para mejorar la productividad y la rentabilidad de sus operaciones agrícolas y ganaderas. Esto ayudará a los agricultores y ganaderos a desarrollar habilidades y conocimientos para implementar prácticas más sostenibles y reducir su huella ecológica.',
+        icon: 'flat-color-icons:approval',
+      },
+      {
+        title: 'Educar y Concienciar',
+        description:
+          'Educar y concienciar a la sociedad sobre la importancia de la permacultura y la agroecología, mediante la creación de programas educativos y actividades que promuevan el conocimiento y el apoyo a las prácticas agrícolas y ganaderas sostenibles. Esto ayudará a fomentar un cambio cultural y una mayor conciencia sobre la importancia de la sostenibilidad en la agricultura y la ganadería.',
+        icon: 'flat-color-icons:voice-presentation',
+        // icon: 'flat-color-icons:document',
+      },
+      {
+        title: 'Desarrollar Iniciativas',
+        description:
+          'Desarrollar iniciativas que promuevan la permacultura y la agroecología, mediante la creación de programas y proyectos que apoyen la implementación de prácticas sostenibles en la agricultura y la ganadería. Esto ayudará a fomentar la innovación y el desarrollo de nuevos modelos de negocio y producción agrícola y ganadera más sostenibles.',
+        icon: 'flat-color-icons:template',
+      },
+      {
+        title: 'Fortalecer la Red',
+        description:
+          'Fortalecer la red de relaciones entre productores, consumidores y organizaciones que trabajan en la permacultura y la agroecología, mediante la creación de alianzas y networking con otras organizaciones y empresas que comparten los mismos objetivos y valores. Esto ayudará a fomentar la cooperación y el intercambio de conocimientos y recursos entre las partes interesadas.',
         icon: 'flat-color-icons:database',
       },
+      // {
+      //   title: 'Testimonial',
+      //   description: 'Step into the gossip corner! Here, other visitors spill the beans and share the juicy details.',
+      //   icon: 'flat-color-icons:voice-presentation',
+      // },
+      // {
+      //   title: 'Contact',
+      //   description:
+      //     'Like a digital mailbox, but faster! Drop a line, ask a question, or send a virtual high-five. Ding! Message in.',
+      //   icon: 'flat-color-icons:business-contact',
+      // },
+      // {
+      //   title: 'Footers',
+      //   description: "The footer's like the credits of a movie but sprinkled with easter eggs. Time to hunt!",
+      //   icon: 'flat-color-icons:database',
+      // },
     ]}
   >
     <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+      <div class="absolute inset-0 dark:bg-transparent"></div>
     </Fragment>
-  </Features2> -->
+  </Features2>
 
   <!-- HighlightedPosts Widget ******* -->
 

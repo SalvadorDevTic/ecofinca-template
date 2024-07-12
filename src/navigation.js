@@ -123,11 +123,11 @@ export const headerData = {
     // },
     {
       text: 'Inicio',
-      href: getPermalink('/'),
+      href: getPermalink('#home'),
     },
     {
       text: 'Objetivos',
-      href: getPermalink('#'),
+      href: getPermalink('#object'),
       // href: getPermalink('/pricing'),
     },
     {
