@@ -127,7 +127,7 @@ export const headerData = {
     },
     {
       text: 'Objetivos',
-      href: getPermalink('#object'),
+      href: getPermalink('#goals'),
       // href: getPermalink('/pricing'),
     },
     {
