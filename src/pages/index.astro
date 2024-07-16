@@ -8,7 +8,8 @@ import Hero from '~/components/widgets/Hero.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 // import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+// import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import Features3 from '~/components/widgets/Features3.astro';
 // import FAQs from '~/components/widgets/FAQs.astro';
 // import Stats from '~/components/widgets/Stats.astro';
 // import CallToAction from '~/components/widgets/CallToAction.astro';
@@ -96,11 +97,10 @@ const metadata = {
   /> -->
 
   <!-- Content Widget **************** -->
-
   <Content
     isReversed
     tagline=""
-    title="Comprometidas con la Permacultura y la Agroecología"
+    title="Comprometidas con la <a href='#perma-agroec'>Permacultura y la Agroecología</a>"
     items={[
       {
         title: 'Sostenibilidad en Acción',
@@ -308,6 +308,75 @@ const metadata = {
       <div class="absolute inset-0 dark:bg-transparent"></div>
     </Fragment>
   </Features2>
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    id="perma-agroec"
+    title="Sobre Nosotros"
+    subtitle="Somos una comunidad comprometida con el desarrollo sostenible y la conservación del medio ambiente. Nuestro objetivo es fomentar prácticas agrícolas y ambientales que promuevan la biodiversidad, la reducción de emisiones y la equidad social."
+    columns={2}
+    isBeforeContent={true}
+    items={[
+      {
+        title: 'La Permacultura',
+        description:
+          'La permacultura es un enfoque integral que combina la agricultura, el diseño del paisaje y el arquitecto para crear sistemas sostenibles y eficientes. En nuestra comunidad, nos enfocamos en desarrollar proyectos de permacultura que promuevan la biodiversidad, la conservación del medio ambiente y la autosuficiencia.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'La Agroecología',
+        description:
+          'La agroecología es un enfoque que se centra en el diseño de sistemas agrícolas sostenibles que se basen en la naturaleza y no en la química. En nuestra comunidad, nos enfocamos en desarrollar proyectos de agroecología que promuevan la producción sostenible de alimentos y la conservación del medio ambiente.',
+        icon: 'tabler:template',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-green-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features3>
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    columns={4}
+    isAfterContent={true}
+    items={[
+      {
+        title: 'Sostenibilidad en el uso del agua',
+        description:
+          'Optimizar el uso del agua en los sistemas agrícolas y alimentarios. Esto se logra mediante técnicas como la conservación del suelo, la reducción del riego, la implementación de sistemas de riego eficientes y la recirculación del agua.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Reciclaje y reutilización de residuos',
+        description:
+          'Reciclaje y reutilización de residuos en los sistemas agrícolas y alimentarios. Esto incluye la conversión de residuos en compost, la utilización de productos naturales como abono orgánico y la reducción de residuos que van a la basura.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Conservación de la biodiversidad',
+        description:
+          'Conservar la biodiversidad en los ecosistemas agrícolas y alimentarios. Esto se logra mediante la promoción de la diversidad de especies, variedades y razas, la protección de hábitats naturales y la prevención de la pérdida de especies.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Uso eficiente de energía renovable',
+        description:
+          'Promuever el uso eficiente de energía renovable en los sistemas agrícolas y alimentarios. Esto incluye la implementación de tecnologías como paneles solares, aerogeneradores y biogás para reducir la dependencia de fuentes de energía no renovables.',
+        icon: 'tabler:template',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/ecofinca-paisa.jpg',
+      alt: 'Colorful Image',
+    }}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-green-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features3>
 
   <!-- HighlightedPosts Widget ******* -->
 
