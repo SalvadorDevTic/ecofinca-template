@@ -132,7 +132,7 @@ export const headerData = {
     },
     {
       text: 'Nosotros',
-      href: getPermalink('#'),
+      href: getPermalink('#about'),
       // href: getPermalink('/about'),
     },
     {
