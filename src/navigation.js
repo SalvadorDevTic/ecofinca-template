@@ -137,7 +137,7 @@ export const headerData = {
     },
     {
       text: 'Contacto',
-      href: getPermalink('#'),
+      href: getPermalink('#form'),
       // href: getPermalink('/contact'),
     },
     // {
