@@ -10,9 +10,11 @@ import Features2 from '~/components/widgets/Features2.astro';
 import Content from '~/components/widgets/Content.astro';
 // import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import Features3 from '~/components/widgets/Features3.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
 // import FAQs from '~/components/widgets/FAQs.astro';
 // import Stats from '~/components/widgets/Stats.astro';
 // import CallToAction from '~/components/widgets/CallToAction.astro';
+import ContactUs from '~/components/widgets/Contact.astro';
 
 const metadata = {
   title: 'Pura Vida — Una ecofinca al servicio de la humanidad, laboratorios de permacultura y agroecología',
@@ -377,6 +379,40 @@ const metadata = {
       <div class="absolute inset-0 bg-green-50 dark:bg-transparent"></div>
     </Fragment>
   </Features3>
+
+  <!-- ContactForm ************** -->
+  <HeroText tagline="" title="Contácta con nosotros" />
+
+  <ContactUs
+    id="form"
+    title="¡Envíenos un mensaje hoy!"
+    subtitle="Nuestro equipo de soporte estará encantado de ayudarte."
+    inputs={[
+      {
+        type: 'text',
+        name: 'name',
+        label: 'Name',
+      },
+      {
+        type: 'email',
+        name: 'email',
+        label: 'Email',
+      },
+      {
+        type: 'hidden',
+        name: '_next',
+        value: 'https://ecofinca-puravida.netlify.app/',
+      },
+    ]}
+    textarea={{
+      label: 'Message',
+    }}
+    disclaimer={{
+      label: '¡Me gustaría unirme a la comunidad!',
+    }}
+    description="Nuestro equipo de soporte normalmente responde dentro de las 24 horas hábiles."
+    button="Enviar"
+  />
 
   <!-- HighlightedPosts Widget ******* -->
 
