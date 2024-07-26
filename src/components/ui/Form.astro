@@ -144,8 +144,19 @@ const { inputs, textarea, disclaimer, button = 'Enviar', description = '' } = As
       body: JSON.stringify(body),
     })
       .then((response) => response.json())
-      .then((data) => console.log(data))
+      .then((data) => {
+        viewToast();
+        console.log(data);
+      })
       .catch((error) => console.log(error));
+  };
+
+  const viewToast = () => {
+    const toast = document.querySelector('#toast-top-right');
+    toast?.classList.toggle('hidden');
+    setTimeout(() => {
+      toast?.classList.toggle('hidden');
+    }, 3000);
   };
 
   buttonForm?.addEventListener('click', sendForm);
