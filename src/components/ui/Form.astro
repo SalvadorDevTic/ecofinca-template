@@ -3,9 +3,12 @@ import type { Form as Props } from '~/types';
 import Button from '~/components/ui/Button.astro';
 
 const { inputs, textarea, disclaimer, button = 'Enviar', description = '' } = Astro.props;
+// const dentro = () =>{
+
+// }
 ---
 
-<form action="https://formsubmit.co/755957f1b453984cb4876dfc0725caa8" method="POST">
+<form id="fc" action="">
   {
     inputs &&
       inputs.map(
@@ -24,6 +27,7 @@ const { inputs, textarea, disclaimer, button = 'Enviar', description = '' } = As
                 value={value}
                 autocomplete={autocomplete}
                 placeholder={placeholder}
+                required
                 class="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
               />
             </div>
@@ -71,7 +75,7 @@ const { inputs, textarea, disclaimer, button = 'Enviar', description = '' } = As
   {
     button && (
       <div class="mt-10 grid">
-        <Button variant="primary" type="submit">
+        <Button variant="primary" type="submit" id="btnf">
           {button}
         </Button>
       </div>
@@ -86,3 +90,63 @@ const { inputs, textarea, disclaimer, button = 'Enviar', description = '' } = As
     )
   }
 </form>
+
+<script>
+  const buttonForm = document.querySelector('#btnf');
+  const formfull = document.querySelector('#fc')?.getElementsByTagName('input');
+  let body = {
+    name: '',
+    email: '',
+    _next: 'https://ecofinca-puravida.netlify.app/',
+    _captcha: false,
+    disclaimer: false,
+  };
+
+  const sendForm = async () => {
+    //test validate input
+    if (formfull) {
+      // console.log('formfull');
+      // console.log(formfull);
+      if (
+        formfull[0].validationMessage.trim().length === 0 &&
+        formfull[1].validationMessage.trim().length === 0 &&
+        formfull[2].validationMessage.trim().length === 0
+      ) {
+        console.log('dentro');
+        for (let index = 0; index < formfull.length; index++) {
+          const name = formfull[index].name;
+          const value = formfull[index].value;
+          let checkedDisclaimer = false;
+          if (name === 'disclaimer') {
+            checkedDisclaimer = formfull[index].checked;
+            body = { ...body, [name]: checkedDisclaimer };
+          } else {
+            body = { ...body, [name]: value };
+          }
+        }
+        console.log('body');
+        console.log(body);
+        console.log('************');
+        sFormApi();
+      } else {
+        console.log('dentro else ');
+      }
+    }
+  };
+
+  const sFormApi = async () => {
+    fetch('https://formsubmit.co/ajax/755957f1b453984cb4876dfc0725caa8', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+      body: JSON.stringify(body),
+    })
+      .then((response) => response.json())
+      .then((data) => console.log(data))
+      .catch((error) => console.log(error));
+  };
+
+  buttonForm?.addEventListener('click', sendForm);
+</script>
